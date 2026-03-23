@@ -10,9 +10,9 @@ from email import encoders
 from threading import Thread
 
 # Default SMTP configuration with environment variable overrides
-SMTP_SERVER = os.environ.get("SMTP_SERVER", "FQDN of mail server")
+SMTP_SERVER = os.environ.get("SMTP_SERVER", "127.0.0.1")
 SMTP_PORT = int(os.environ.get("SMTP_PORT", 25))
-SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "[EMAIL_ADDRESS]")
+SENDER_EMAIL = os.environ.get("SENDER_EMAIL", "sender@example.com")
 
 class EmailSenderApp:
     """

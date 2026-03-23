@@ -46,3 +46,14 @@ This is a Python GUI application built with `tkinter` that allows you to easily 
 4. Add file attachments by clicking **Adjuntar Archivos**.
 5. When ready, click **Enviar Mails**. You will be prompted to select a `.txt` file containing the recipient email addresses.
 6. A progress window will track the status of sending. You can cancel at any time.
+
+## Testing Locally
+If you want to test the application without sending actual emails, you can run the included `fake_smtp.py` script. It acts as a local dummy SMTP server that captures outgoing emails and prints them to the console instead of delivering them.
+
+1. Open a new terminal and start the fake SMTP server:
+   ```bash
+   python fake_smtp.py
+   ```
+2. The server will listen on `127.0.0.1` port `25` (which are the default fallback values if no `.env` is configured).
+3. Run the `mailer.py` application normally and send your emails.
+4. You will see the incoming emails printed in the terminal where `fake_smtp.py` is running. Press `Ctrl+C` in that terminal to stop the server when you are done testing.
