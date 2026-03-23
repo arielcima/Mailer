@@ -46,46 +46,46 @@ class EmailSenderApp:
 
     def _create_widgets(self):
         # Subject
-        tk.Label(self.root, text="Subject:").place(x=4, y=0)
+        tk.Label(self.root, text="Asunto:").place(x=4, y=0)
         self.subject_entry = tk.Entry(self.root)
         self.subject_entry.place(x=4, y=20)
 
         # Body
-        tk.Label(self.root, text="Body:").place(x=4, y=40)
+        tk.Label(self.root, text="Cuerpo:").place(x=4, y=40)
         self.body_entry = tk.Text(self.root, height=5)
         self.body_entry.place(x=4, y=60)
 
         # Add Image Checkbox
-        tk.Checkbutton(self.root, text="Add Image", variable=self.add_image, 
+        tk.Checkbutton(self.root, text="Agregar Imagen", variable=self.add_image, 
                        command=self.toggle_image_widgets).place(x=4, y=150)
 
         # Browse Image Button
-        self.browse_button = tk.Button(self.root, text="Browse", command=self.browse_image, state=tk.DISABLED)
+        self.browse_button = tk.Button(self.root, text="Buscar", command=self.browse_image, state=tk.DISABLED)
         self.browse_button.place(x=215, y=175)
 
         # Image Path
-        self.image_path_label = tk.Label(self.root, text="Image Path:", state=tk.DISABLED)
+        self.image_path_label = tk.Label(self.root, text="Ruta Imagen:", state=tk.DISABLED)
         self.image_path_label.place(x=4, y=178)
         self.image_path_entry = tk.Entry(self.root, state=tk.DISABLED)
         self.image_path_entry.place(x=80, y=178)
 
         # Add Image Link Checkbox
-        tk.Checkbutton(self.root, text="Add Link", variable=self.add_image_link_var, 
+        tk.Checkbutton(self.root, text="Agregar Enlace", variable=self.add_image_link_var, 
                        command=self.toggle_image_link_field).place(x=4, y=200)
 
         # Image Link
         self.image_link_entry = tk.Entry(self.root, state=tk.DISABLED)
         self.image_link_entry.place(x=80, y=228)
-        tk.Label(self.root, text="Link:").place(x=4, y=225)
+        tk.Label(self.root, text="Enlace:").place(x=4, y=225)
 
         # Attached Files
-        tk.Label(self.root, text="Attached Files:").place(x=4, y=255)
+        tk.Label(self.root, text="Archivos Adjuntos:").place(x=4, y=255)
         self.attached_files_text = tk.Text(self.root, height=5)
         self.attached_files_text.place(x=4, y=275)
 
         # Action Buttons
-        tk.Button(self.root, text="Attach Files", command=self.attach_files).place(x=4, y=370)
-        tk.Button(self.root, text="Send Emails", command=self.send_email).place(x=290, y=370)
+        tk.Button(self.root, text="Adjuntar Archivos", command=self.attach_files).place(x=4, y=370)
+        tk.Button(self.root, text="Enviar Mails", command=self.send_email).place(x=290, y=370)
 
         self.toggle_image_widgets()
         self.toggle_image_link_field()

@@ -2,6 +2,7 @@
 
 This is a Python GUI application built with `tkinter` that allows you to easily send bulk emails to a list of recipients. It supports rich text (HTML format), image embedding through Content-ID, clickable links, and multiple file attachments.
 
+*Note: A Spanish version of the interface is also available by running `mailer_esp.py`.*
 ## Features
 - **Graphical User Interface:** Simple Tkinter UI.
 - **Rich Emails:** Embed a company logo or image and link it to a URL.
